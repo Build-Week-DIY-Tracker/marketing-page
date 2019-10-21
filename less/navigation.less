@@ -1,1 +1,45 @@
 // Navigation Styles here
+.navigation{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: @neutral;
+    color: @white;
+    
+    *{
+        background: inherit;
+        color: inherit;
+    }
+
+    .logoText{
+        font-family: @sans;
+    }
+
+    .fa-hammer, .logoText{
+        text-decoration: none;
+        font-size: 6.4rem;
+        margin-left: 15px;
+        color: @brightText;
+    }
+
+    nav{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        a{
+            font-family: @sans;
+            font-size: 2.4rem;
+            flex-grow: 0.24;
+
+            .customButton();
+
+        }
+    }
+}
