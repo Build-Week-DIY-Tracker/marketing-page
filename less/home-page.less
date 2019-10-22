@@ -10,6 +10,11 @@ body{
         border-top: 2px solid @white;
         width: 85%;
         max-width: 1140px;
+
+        @media @mobile{
+            width: 100%;
+        }
+
         .promo{
             display: flex;
             flex-flow: column nowrap;
@@ -40,6 +45,10 @@ body{
                 @media @mobile{
                     padding: 0 20px;
                 }
+            }
+
+            .center{
+                width: 85%;
             }
 
             .bigButton{
