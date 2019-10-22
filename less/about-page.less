@@ -1,0 +1,62 @@
+.hero{
+    
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    .about-banner{
+        background-image: url("/img/zach-lucero-qAriosuB-lY-unsplash.jpg"); 
+        background-color: #c0c0c0; 
+        height: 500px;
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%; 
+        border-radius: 10px;
+
+        @media @mobile{
+            height: 200px;
+        }
+    }
+
+    div{
+        padding: 20px;
+    }
+
+    h1{
+        margin: 35px 0 15px 0;
+
+        @media @mobile{
+            padding: 0 20px;
+        }
+    }
+}
+
+.main{
+    margin-top: 35px;
+    border-top: 2px solid @white;
+    padding: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+
+    div{
+        padding: 10px;
+        width: 50%;
+        border-right: 2px dashed @white;
+
+        @media @mobile{
+            border-right: none;
+            width: 100%;
+        }
+
+    }
+
+    .last{
+        border-right: none;
+    }
+
+    @media @mobile{
+        flex-direction: column;
+    }
+}

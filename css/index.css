@@ -156,6 +156,9 @@ h3 {
   color: #C192E9;
   font-family: 'Roboto', sans-serif;
 }
+a {
+  color: #C192E9;
+}
 .navigation {
   width: 100%;
   display: flex;
@@ -181,6 +184,13 @@ h3 {
   margin-left: 15px;
   color: rgba(255, 255, 255, 0.5);
 }
+@media (max-width: 500px) {
+  .navigation .fa-hammer,
+  .navigation .logoText {
+    font-size: 4.2rem;
+    margin: 5px 0;
+  }
+}
 .navigation nav {
   width: 50%;
   height: 100%;
@@ -192,8 +202,7 @@ h3 {
 .navigation nav a {
   font-family: 'Roboto', sans-serif;
   font-size: 2.4rem;
-  flex-grow: 0.24;
-  border-radius: 5px;
+  flex-grow: 1;
   display: flex;
   text-decoration: none;
   height: 100%;
@@ -201,10 +210,30 @@ h3 {
   align-items: center;
   color: #C192E9;
   background: #150920;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 5px;
 }
 .navigation nav a:hover {
   color: #150920;
   background: #C192E9;
+}
+@media (max-width: 500px) {
+  .navigation nav a {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 500px) {
+  .navigation nav {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .navigation {
+    flex-flow: column nowrap;
+  }
 }
 footer {
   width: 100%;
@@ -215,6 +244,8 @@ footer {
   align-items: center;
   background: #150920;
   border-top: 2px solid #C192E9;
+  align-self: flex-end;
+  justify-self: flex-end;
 }
 footer * {
   background: inherit;
@@ -222,8 +253,8 @@ footer * {
 body {
   display: flex;
   flex-flow: column nowrap;
-  justify-items: center;
   align-items: center;
+  height: 100vh;
 }
 body .main-content {
   padding-top: 10px;
@@ -237,9 +268,12 @@ body .main-content .promo {
   flex-flow: column nowrap;
   align-items: center;
 }
+body .main-content .promo div {
+  padding: 20px;
+}
 body .main-content .promo .banner {
   background-image: url("/img/eugen-str-CrhsIRY3JWY-unsplash.jpg");
-  background-color: #2ed73a;
+  background-color: #c0c0c0;
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
@@ -247,10 +281,74 @@ body .main-content .promo .banner {
   width: 100%;
   border-radius: 10px;
 }
+@media (max-width: 500px) {
+  body .main-content .promo .banner {
+    height: 200px;
+  }
+}
 body .main-content .promo h1 {
   margin: 35px 0 15px 0;
 }
-body .main-content .main {
+@media (max-width: 500px) {
+  body .main-content .promo h1 {
+    padding: 0 20px;
+  }
+}
+body .main-content .promo .bigButton {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.4rem;
+  padding: 0 20px;
+  margin: 15px 0 0 0;
+  border: 2px solid #623A84;
+  display: flex;
+  text-decoration: none;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #C192E9;
+  background: #150920;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 5px;
+}
+body .main-content .promo .bigButton:hover {
+  color: #150920;
+  background: #C192E9;
+}
+.hero {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.hero .about-banner {
+  background-image: url("/img/zach-lucero-qAriosuB-lY-unsplash.jpg");
+  background-color: #c0c0c0;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .hero .about-banner {
+    height: 200px;
+  }
+}
+.hero div {
+  padding: 20px;
+}
+.hero h1 {
+  margin: 35px 0 15px 0;
+}
+@media (max-width: 500px) {
+  .hero h1 {
+    padding: 0 20px;
+  }
+}
+.main {
   margin-top: 35px;
   border-top: 2px solid #C192E9;
   padding: 10px;
@@ -258,22 +356,22 @@ body .main-content .main {
   flex-flow: row nowrap;
   justify-content: space-evenly;
 }
-body .main-content .main div {
+.main div {
   padding: 10px;
   width: 50%;
   border-right: 2px dashed #C192E9;
 }
 @media (max-width: 500px) {
-  body .main-content .main div {
+  .main div {
     border-right: none;
     width: 100%;
   }
 }
-body .main-content .main .last {
+.main .last {
   border-right: none;
 }
 @media (max-width: 500px) {
-  body .main-content .main {
+  .main {
     flex-direction: column;
   }
 }

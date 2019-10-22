@@ -1,8 +1,8 @@
 body{
     display: flex;
     flex-flow: column nowrap;
-    justify-items: center;
     align-items: center;
+    height: 100vh;
 
     .main-content{
         padding-top: 10px;
@@ -10,56 +10,47 @@ body{
         border-top: 2px solid @white;
         width: 85%;
         max-width: 1140px;
-
         .promo{
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
 
+            div{
+                padding: 20px;
+            }
+
             .banner{
                 background-image: url("/img/eugen-str-CrhsIRY3JWY-unsplash.jpg"); 
-                background-color: #2ed73a; 
+                background-color: #c0c0c0; 
                 height: 500px;
                 background-position: center; 
                 background-repeat: no-repeat;
                 background-size: cover;
                 width: 100%; 
                 border-radius: 10px;
+
+                @media @mobile{
+                    height: 200px;
+                }
             }
 
             h1{
                 margin: 35px 0 15px 0;
-            }
-        }
-
-        .main{
-            margin-top: 35px;
-            border-top: 2px solid @white;
-            padding: 10px;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-evenly;
-
-            div{
-                padding: 10px;
-                width: 50%;
-                border-right: 2px dashed @white;
 
                 @media @mobile{
-                    border-right: none;
-                    width: 100%;
+                    padding: 0 20px;
                 }
-
             }
 
-            .last{
-                border-right: none;
-            }
+            .bigButton{
+                font-family: @sans;
+                font-size: 2.4rem;
+                padding: 0 20px;
+                margin: 15px 0 0 0;
+                border: 2px solid @neutral;
 
-            @media @mobile{
-                flex-direction: column;
+                .customButton();
             }
-
         }
     }
 }
