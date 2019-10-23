@@ -281,6 +281,13 @@ body .main-content .promo {
 body .main-content .promo div {
   padding: 20px;
 }
+@media (max-width: 500px) {
+  body .main-content .promo div h2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+}
 body .main-content .promo .banner {
   background-image: url("/img/eugen-str-CrhsIRY3JWY-unsplash.jpg");
   background-color: #c0c0c0;
@@ -392,7 +399,10 @@ body .main-content .promo .bigButton:hover {
 .team {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 15px;
+  border-top: 1px dashed #623A84;
+  align-items: flex-start;
 }
 .team .personContainer {
   background: #150920;
@@ -404,21 +414,67 @@ body .main-content .promo .bigButton:hover {
   width: 48%;
   margin: 10px 0;
 }
-.team .personContainer div {
+.team .personContainer h1 {
+  background: #8A5DB0;
+  color: #150920;
+  padding: 5px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+.team .personContainer .personHalf {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
-.team .personContainer div img {
+.team .personContainer .personHalf img {
   border-radius: 50%;
-  width: 50%;
+  max-width: 50%;
+  justify-content: center;
 }
-.team .personContainer div p {
+.team .personContainer .personHalf .infoContainer {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  width: 50%;
+  max-width: 50%;
   padding: 15px;
+}
+@media (max-width: 500px) {
+  .team .personContainer .personHalf .infoContainer {
+    max-width: 100%;
+  }
+}
+.team .personContainer .personHalf .infoContainer h2 {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .team .personContainer .personHalf img,
+  .team .personContainer .personHalf p {
+    max-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .team .personContainer .personHalf {
+    flex-flow: column nowrap;
+  }
+}
+.team .personContainer .buttonBar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0;
+}
+.team .personContainer .buttonBar i {
+  font-size: 4.8rem;
 }
 .team .personContainer * {
   background: inherit;
+}
+@media (max-width: 500px) {
+  .team .personContainer {
+    width: 100%;
+    flex-flow: column nowrap;
+  }
 }
