@@ -60,3 +60,39 @@
         flex-direction: column;
     }
 }
+
+.team{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    .personContainer{
+        background: @black;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 15px;
+        border-radius: 15px;
+        width: 48%;
+        margin: 10px 0;
+
+        div{
+            display: flex;
+            flex-flow: row nowrap; 
+            img{
+                border-radius: 50%;
+                width: 50%;
+            }
+            p{
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                width: 50%;
+                padding: 15px;
+            }
+        }
+        *{
+            background: inherit;
+        }
+    }
+}
